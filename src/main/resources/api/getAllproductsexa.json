@@ -1,0 +1,19 @@
+
+  [
+    
+      {"id": 3242,
+      "name": "mouse",
+      "barcode": "2412",
+      "rate": "1325",
+      "productCatagory": "PCmouse" },
+      {"id": 233,
+      "name": " bread",
+      "barcode": "2431",
+      "rate": "55",
+      "productCatagory": "food" },
+      {"id": 2412,
+      "name": "water", 
+      "barcode": "2221",
+      "rate": "200",
+      "productCatagory": "Cleanwater"}
+]

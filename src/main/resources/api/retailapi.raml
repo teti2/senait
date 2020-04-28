@@ -1,0 +1,202 @@
+#%RAML 1.0
+baseUri: https://anypoint.mulesoft.com/mocking/api/v1/links/44b4469b-93a2-455a-bfdb-7e6675abd13f/ # 
+title: RetailAPI
+
+/products: 
+    description: retrive products data
+    get:
+     responses:
+      200:
+        body:
+          application/json:
+           example: !include getAllproductsexa.json
+            
+             
+      400:
+        body:
+          application/json:
+            example: {message:"bad request"}
+      
+          
+/id:
+  description: retrive by specfic id products
+  get:
+    queryParameters:
+      id:
+        type: integer
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include getAllproductsexa.json
+  put:
+    description: update by specfic id
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include getAllproductsexa.json
+
+  delete:
+    description: remove by specific id
+    queryParameters:
+      id:
+        type: integer
+        required: true
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include getAllproductsexa.json
+
+  post:
+    description: create products
+    responses:
+      201:
+        body:
+          application/json:
+            example: !include getAllproductsexa.json
+
+      500:
+        body:
+          application/json:
+            example: {message:"server failure"}
+                      
+
+/Bills:
+  description: retrive all bill data
+  get:
+    description: fetch bill data
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include getAllproductsexa.json
+
+      406:
+        body:
+          application/json:
+            example: {massage:"not acceptable"}
+                    
+  post:
+    description: creat all bill data
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include getAllproductsexa.json
+
+      408:
+        body:
+          application/json:
+            example: {message:"request timeout"}
+                     
+
+  /id:
+     description: retrive bill data by id
+     get:
+        queryParameters:
+          id: 
+           type: integer
+           required: true
+        description: fetch data
+        responses:
+             200:
+              body:
+                application/json:
+                 example: !include getAllproductsexa.json
+                
+     put:
+       queryParameters:
+         id:
+           type: integer
+           required: true
+       description: update bill data by particular id
+       responses:
+         200:
+           body:
+             application/json:
+               example: !include getAllproductsexa.json
+
+     delete: 
+            queryParameters:
+              id:
+                type: integer
+                required: true
+            description: remove bill data by particular id
+            responses:
+              400:
+                body:
+                  application/json:
+                    example: !include getAllproductsexa.json
+
+/productcatagory:
+  description: retrive productcatagorie
+  get:
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include getAllproductsexa.json
+            
+  /id:
+    description: retrive by specfic id product
+    get:
+      queryParameters:
+        id:
+          type: integer
+          required: true
+      responses:
+        200:
+          body:
+            application/json:
+              example: !include getAllproductsexa.json
+    put:
+      queryParameters:
+        id:
+          type: integer
+          required: true
+      description: update by specific id
+      responses:
+        200:
+          body:
+            application/json:
+              example: !include getAllproductsexa.json
+
+    delete:
+      queryParameters:
+        id:
+          type: integer
+          required: true
+      description: remove by specific id
+      responses: 
+       200:
+         body:
+           application/json:
+             example: !include getAllproductsexa.json
+               
+    post:
+      description: create by id productcatagorie
+      responses:
+        201:
+          body:
+            application/json:
+              example: !include getAllproductsexa.json
+              
+                
+              
+          
+                
+           
+
+ 
+                
+
+              
+    
+
+                      
+
+
+                 
+
